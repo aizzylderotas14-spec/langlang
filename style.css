@@ -1,0 +1,104 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #071b3b, #164e9b, #70baff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.gift-box, .surprise {
+    background: rgba(255, 255, 255, 0.13);
+    padding: 40px 25px;
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.gift-icon {
+    font-size: 100px;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+button {
+    background: #d9efff;
+    color: #123d70;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    transform: scale(1.07);
+}
+
+.heart {
+    font-size: 65px;
+    margin: 20px;
+    animation: heartbeat 1s infinite;
+}
+
+.ending {
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
+
+.surprise {
+    animation: appear 1s ease;
+}
+
+#finalMessage {
+    margin-top: 25px;
+    font-size: 23px;
+    color: #d9efff;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes heartbeat {
+    50% { transform: scale(1.2); }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
